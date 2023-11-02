@@ -14,10 +14,6 @@ const start = async () => {
 
         await driver.get('https://www.selenium.dev/selenium/web/web-form.html');
 
-        const textInput = await driver.findElement(By.id('my-text-id'));
-        await textInput.sendKeys('Este es mi texto desde selenium textinput');
-        await delay(2000);
-
         const textArea = await driver.findElement(By.css('textarea[name="my-textarea"]'));
         await textArea.sendKeys('anita lava la tina.');
         await delay(2000);
@@ -29,8 +25,12 @@ const start = async () => {
         const optionThree = await driver.findElement(By.css('option[value="3"]'));
         await optionThree.click();
         await delay(2000);
+        await dropdown.click();
+        await delay(2000);
 
         const colorPicker = await driver.findElement(By.css('input[name="my-colors"]'));
+        await colorPicker.click();
+        await delay(2000);
         await colorPicker.sendKeys("#23A722");
         await delay(2000);
 
