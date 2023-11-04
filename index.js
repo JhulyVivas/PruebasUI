@@ -22,8 +22,8 @@ const start = async () => {
         await dropdown.click();
         await delay(2000);
         
-        const optionThree = await driver.findElement(By.css('option[value="3"]'));
-        await optionThree.click();
+        const option = await driver.findElement(By.css('option[value="3"]'));
+        await option.click();
         await delay(2000);
         await dropdown.click();
         await delay(2000);
@@ -31,7 +31,7 @@ const start = async () => {
         const colorPicker = await driver.findElement(By.css('input[name="my-colors"]'));
         await colorPicker.click();
         await delay(2000);
-        await colorPicker.sendKeys("#23A722");
+        await colorPicker.sendKeys("#20A722");
         await delay(2000);
 
         const datePicker = await driver.findElement(By.css('input[name="my-date"]'));
